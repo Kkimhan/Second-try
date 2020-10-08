@@ -1,6 +1,6 @@
 <?php 
 
-if( isset( $_GET['Login'] ) ) { 
+if ( isset( $_GET['Login'] ) ) { 
 
     $user = $_GET['username']; 
      
@@ -10,7 +10,7 @@ if( isset( $_GET['Login'] ) ) {
     $qry = "SELECT * FROM `users` WHERE user='$user' AND password='$pass';"; 
     $result = mysql_query( $qry ) or die( '<pre>' . mysql_error() . '</pre>' ); 
 
-    if( $result && mysql_num_rows( $result ) == 1 ) { 
+    if ( $result && mysql_num_rows( $result ) == 1 ) { 
         // Get users details 
         $i=0; // Bug fix. 
         $avatar = mysql_result( $result, $i, "avatar" ); 
